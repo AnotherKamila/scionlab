@@ -26,3 +26,6 @@ python manage.py createsuperuser --username admin --email admin@scionlab.org --n
 python manage.py shell -c 'from scionlab.models import User; u = User.objects.get(username="admin"); u.set_password("admin"); u.save()'
 
 python manage.py loaddata scionlab/fixtures/testtopo-ases-links.yaml
+
+cp scionlab/fixtures/testtopo_ca_key.pem run/dev_root_ca_key.pem
+cp scionlab/fixtures/testtopo_ca_cert.pem run/dev_root_ca_cert.pem
